@@ -1,4 +1,4 @@
-[[About|Wikinder]] · [Discord](https://discord.gg/bgEXkwxnQp) ([jp](https://discord.gg/qPE8DyuVw5)) · [IG](https://www.instagram.com/wikindergarten/) · [TikTok](https://www.tiktok.com/@wikinder) · [X](https://x.com/wikinder) ([jp](https://x.com/wikinderjp)) · [YouTube](https://www.youtube.com/@wikinder)
+[[About|Wikinder]] · [Discord](https://discord.gg/bgEXkwxnQp) <sub>([jp](https://discord.gg/qPE8DyuVw5))</sub> · [IG](https://www.instagram.com/wikindergarten/) · [TikTok](https://www.tiktok.com/@wikinder) · [X](https://x.com/wikinder) <sub>([jp](https://x.com/wikinderjp))</sub> · [YouTube](https://www.youtube.com/@wikinder)
 
 ## Welcome to Wikinder
 
@@ -26,9 +26,17 @@ https://github.com/user-attachments/assets/2cbf4e6e-dc5b-4ff1-b04a-8373a4738dbf
 
 </details>
 
-* [[Kaibun]] (Japanese palindromes)
-* [[Shiritori]] (Japanese word chain game)
-* [[Chinese characters with the most strokes]]
+* [[Math]]
+* Languages
+    * [[Chinese characters with the most strokes]]
+    * Japanese
+        * [[Kaibun]] (palindromes)
+        * [[Shiritori]] (word chain game)
+* Games
+    * [[Othello]]
+    * [[Chess]]
+    * [[Shogi]]
+    * [[Go]]
 
 ## Donors
 

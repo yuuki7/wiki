@@ -16,10 +16,7 @@
 * [[Bear math|Math#Bear math]]
 * [[Math in anime]]
 * 3x3 shogi
-* [[Chinese characters with the most strokes]]
-* Kaibun
-* Shiritori with country names
-* Low-level runs in Genshin Impact
+* [[Low-level runs in Genshin Impact|Genshin Impact low level runs]]
 
 ## Biography
 

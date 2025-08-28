@@ -1,7 +1,5 @@
 < [[Math]]
 
-* [[Moving bears]]
-
 We can think of a number $n$ as a collection of $n$ bears.
 
 ```
@@ -17,6 +15,13 @@ We can think of a number $n$ as a collection of $n$ bears.
 
 🧸🧸🧸🧸🧸🧸
 ```
+
+<details>
+<summary>Subpages</summary>
+
+* [[Moving bears]]
+
+</details>
 
 ## Even and odd numbers
 

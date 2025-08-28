@@ -11,15 +11,15 @@
 
 ## What I'm working on
 
-### Recreational number theory
+### Math
 
 I study:
 
-* Numbers like 111, 123, and 12321. Whether they are prime or not, etc.
-* Elementary number theory using [[counting bears|Math#Math of counting bears]], like representing the number 3 as 🧸🧸🧸.
-* The 24 game and the normal form of a numerical expression, like converting $8 + 2$ to $2 + 8.$
+* Numbers like 111, 123, and 12321. Whether they are prime, etc.
+* The "make 24" game and the normal form of a numerical expression, like converting $8 + 2$ to $2 + 8.$
+* [[Math of counting bears|Math#Math of counting bears]], like representing the number 3 as 🧸🧸🧸.
 
-Keywords: repdigits, repunits, palindromic numbers, reverse of a number, concatenation of numbers
+Keywords: repdigits, repunits, [A138141](https://oeis.org/A138141), palindromic numbers, reverse of a number, concatenation of numbers, [A140606](https://oeis.org/A140606), [A247982](https://oeis.org/A247982)
 
 ## Bio
 

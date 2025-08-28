@@ -1,15 +1,27 @@
 <table>
   <tr>
-    <th scope="row">Official site</th>
+    <th scope="row">Website</th>
     <td>
       <a href="https://yuukikonno.com/">yuukikonno.com</a>
     </td>
   </tr>
 </table>
 
-**Yuuki Konno** (金野 裕希, _Konno Yūki_, born May 17, 1994) is a Japanese Wikid.
+**Yuuki Konno** (金野 裕希, _Konno Yūki_; born May 17, 1994) is a Japanese Wikid.
 
-## Biography
+## What I'm working on
+
+### Recreational number theory
+
+I study:
+
+* Numbers like 111, 123, and 12321. Whether they are prime or not, etc.
+* Elementary number theory using counting bears, like representing the number 3 as 🧸🧸🧸.
+* The 24 game and the normal form of a numerical expression, like converting $8 + 2$ to $2 + 8.$
+
+Keywords: repdigits, repunits, palindromic numbers, reverse of a number, concatenation of numbers
+
+## Bio
 
 <details>
 <summary>[show]</summary>

@@ -1,8 +1,8 @@
-MusicXML is an interchange format for music scores. However, it is too verbose to write by hand. MuseScore supports it and is suitable for practical use.
+MusicXML is an interchange format for music scores. However, it is too verbose to write by hand. MuseScore is a practical application that supports it.
 
 LilyPond notation is useful for writing simple scores. It is less interchangeable, although python-ly provides limited support for converting to MusicXML.
 
-Below, you'll find LilyPond fragments for nursery rhymes. For the full code and instructions, see [#How to convert LilyPond files](#how-to-convert-lilypond-files). All files are available in [my repo](https://github.com/yuukiarchive/sheetmusic).
+Below are fragments of LilyPond code for nursery rhymes. For the full code and instructions, see [#How to convert LilyPond files](#how-to-convert-lilypond-files). All files are available in [my repo](https://github.com/yuukiarchive/sheetmusic).
 
 ## Row, Row, Row Your Boat
 
@@ -14,9 +14,9 @@ Below, you'll find LilyPond fragments for nursery rhymes. For the full code and 
 }
 ```
 
-![Sheet music for "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/4c65b571-0107-4efe-9ceb-c95033cafd2d)
+![Sheet music for "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/cb9b023d-f6fa-4500-9d12-f9f0f69067d3)
 
-[Play "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/775c080b-f99c-4b4c-8d81-ee06e0ccbb49)
+[Play "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/8c0133cd-4a1f-4fc8-b908-492482ab419a)
 
 ## Twinkle, Twinkle, Little Star
 
@@ -37,11 +37,17 @@ Example of the full LilyPond code for "[Row, Row, Row Your Boat](#row-row-row-yo
 \version "2.24.4"
 
 \score {
+  <<
+  \chords {
+    c2. | s2.*3 |
+    c2. | s2. | g2. | c2.
+  }
   \relative c' {
     \time 6/8
     c4. c4. | c4 d8 e4. | e4 d8 e4 f8 | g2. | \break
-    c8[ c8 c8] g8[ g8 g8] | e8[ e8 e8] c8[ c8 c8] | g'4 f8 e4 d8 | c2. \bar "|."
+    c8[ c8 c8] g8[ g8 g8] | e8[ e8 e8] c8[ c8 c8] | g'4 f8 e4 d8 | c2. \fine
   }
+  >>
 
   \layout {
     \autoBreaksOff
@@ -50,12 +56,12 @@ Example of the full LilyPond code for "[Row, Row, Row Your Boat](#row-row-row-yo
   }
 
   \midi {
-    \tempo 4. = 108
+    \tempo 4. = 120
   }
 }
 ```
 
-Convert to SVG and MIDI:
+Convert LilyPond to SVG and MIDI:
 
 ```sh
 lilypond --svg -dcrop -dmidi-extension=mid row.ly

@@ -16,7 +16,7 @@ Below are LilyPond fragments for nursery rhymes. See [#How to convert LilyPond s
 
 ![Sheet music for "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/fcc2eaa1-01cd-4c4f-b5d7-1efc7838a46c)
 
-[Play "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/b45fccd3-3ff1-40bb-9915-d9c027ac5b67)
+[Play "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/662457d0-92e3-4e5e-bfb0-7c229551abf1)
 
 ## Twinkle, Twinkle, Little Star
 
@@ -31,7 +31,7 @@ Below are LilyPond fragments for nursery rhymes. See [#How to convert LilyPond s
 
 ![Sheet music for "Twinkle, Twinkle, Little Star"](https://github.com/user-attachments/assets/24440c64-272d-45c8-97dd-d40b44c73982)
 
-[Play "Twinkle, Twinkle, Little Star"](https://github.com/user-attachments/assets/88e9beeb-d666-44e0-9c90-914824fdf873)
+[Play "Twinkle, Twinkle, Little Star"](https://github.com/user-attachments/assets/c616135f-fb58-47f9-bdf4-c6450ab10917)
 
 ## How to convert LilyPond scores
 
@@ -45,6 +45,7 @@ Prerequisites:
 * fluidsynth
 * [FluidR3_GM.sf2](https://github.com/pianobooster/fluid-soundfont/releases)
 * ffmpeg
+* python
 * python-ly
 
 Example of the full LilyPond score for "[Row, Row, Row Your Boat](#row-row-row-your-boat)" (row.ly):
@@ -52,13 +53,13 @@ Example of the full LilyPond score for "[Row, Row, Row Your Boat](#row-row-row-y
 ```lilypond
 \version "2.24.4"
 
-\header {
-  title = "Row, Row, Row Your Boat"
-}
-
 \paper {
   indent = #0
   line-width = #120
+}
+
+\header {
+  title = "Row, Row, Row Your Boat"
 }
 
 \score {
@@ -106,14 +107,14 @@ fluidsynth -ni /path/to/FluidR3_GM.sf2 row.mid -F row.wav
 Convert WAV to WebM:
 
 ```sh
-ffmpeg -f lavfi -i 'color=c=black:s=320x180' -i row.wav -c:v libvpx-vp9 -c:a libopus -shortest -pix_fmt yuv420p row.webm
+ffmpeg -f lavfi -i 'color=c=black:s=320x180' -i row.wav -c:v libvpx-vp9 -c:a libopus -af 'silenceremove=stop_periods=1:stop_threshold=-50dB' -shortest -pix_fmt yuv420p row.webm
 ```
 
 Convert LilyPond to MusicXML (extracting only the `\relative` block):
 
 ```sh
 python3 -c 'import re, sys; print(re.search(r"\\relative.*?{.*?}", open(sys.argv[1]).read(), re.DOTALL).group(0))' row.ly \
-| ly musicxml > row.musicxml
+| ly musicxml -o row.musicxml
 ```
 
 </details>

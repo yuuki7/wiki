@@ -1,8 +1,8 @@
-MusicXML is an interchange format for music scores. However, it is too verbose to write by hand. MuseScore is a practical application that supports it.
+MusicXML is an interchange format for sheet music. However, it is too verbose to write by hand. MuseScore is a practical application that supports it.
 
 LilyPond notation is useful for writing simple scores. It is less interchangeable, although python-ly provides limited support for converting to MusicXML.
 
-Below are fragments of LilyPond code for nursery rhymes. For the full code and instructions, see [#How to convert LilyPond files](#how-to-convert-lilypond-files). All files are available in [my repo](https://github.com/yuukiarchive/sheetmusic).
+Below are LilyPond fragments for nursery rhymes. See [#How to convert LilyPond scores](#how-to-convert-lilypond-scores) for instructions. All files are available in [my repo](https://github.com/yuukiarchive/sheetmusic).
 
 ## Row, Row, Row Your Boat
 
@@ -14,13 +14,16 @@ Below are fragments of LilyPond code for nursery rhymes. For the full code and i
 }
 ```
 
-![Sheet music for "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/cb9b023d-f6fa-4500-9d12-f9f0f69067d3)
+![Sheet music for "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/b2bdc887-b0c1-48bd-9f1c-8c949353850b)
 
-[Play "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/8c0133cd-4a1f-4fc8-b908-492482ab419a)
+[Play "Row, Row, Row Your Boat"](https://github.com/user-attachments/assets/a7b99ee4-129f-4c9d-8b7b-7e523389e557)
 
 ## Twinkle, Twinkle, Little Star
 
-## How to convert LilyPond files
+## How to convert LilyPond scores
+
+<details>
+<summary>[show]</summary>
 
 Prerequisites:
 
@@ -31,7 +34,7 @@ Prerequisites:
 * ffmpeg
 * python-ly
 
-Example of the full LilyPond code for "[Row, Row, Row Your Boat](#row-row-row-your-boat)" (row.ly):
+Example of the full LilyPond score for "[Row, Row, Row Your Boat](#row-row-row-your-boat)" (row.ly):
 
 ```lilypond
 \version "2.24.4"
@@ -39,8 +42,8 @@ Example of the full LilyPond code for "[Row, Row, Row Your Boat](#row-row-row-yo
 \score {
   <<
   \chords {
-    c2. | s2.*3 |
-    c2. | s2. | g2. | c2.
+    c,2.*4 |
+    c,2.*2 | g,2. | c,2.
   }
   \relative c' {
     \time 6/8
@@ -51,6 +54,7 @@ Example of the full LilyPond code for "[Row, Row, Row Your Boat](#row-row-row-yo
 
   \layout {
     \autoBreaksOff
+    \numericTimeSignature
     indent = #0
     line-width = #120
   }
@@ -91,3 +95,5 @@ Convert LilyPond to MusicXML (extracting only the `\relative` block):
 python3 -c 'import re, sys; print(re.search(r"\\relative.*?{.*?}", open(sys.argv[1]).read(), re.DOTALL).group(0))' row.ly \
 | ly musicxml > row.musicxml
 ```
+
+</details>

@@ -35,7 +35,13 @@
 <details>
 <summary>[show]</summary>
 
-- [Wiki](https://archive.today/wikinder.org)
-- [X](https://twilog.togetter.com/wikinder)
+### Wiki
+
+- [Archives](https://github.com/wikinder/wikinder.github.io#archives)
+
+### X
+
+- [Twilog](https://twilog.togetter.com/wikinder)
+- [Posfie](https://posfie.com/@wikinder)
 
 </details>

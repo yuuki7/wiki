@@ -1,3 +1,3 @@
-# [Yuukinder](https://yuukikonno.com/wiki)
+# [Yuukinder](https://yuukikonno.com/wiki/)
 
 A fork of [Wikinder](https://wikinder.org)

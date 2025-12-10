@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="format-detection" content="telephone=no">
+    <title>Music notation on computers</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="https://wikinder.org/Music-notation-on-computers">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+    <meta name="author" content="yuuki">
+    <!-- OG meta tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Music notation on computers">
+    <meta property="og:url" content="https://wikinder.org/Music-notation-on-computers">
+    <meta property="og:image" content="https://wikinder.org/assets/images/icon.jpg">
+    <meta property="og:site_name" content="Wikinder">
+    <meta property="article:published_time" content="2025-09-08T02:01:15Z">
+    <meta property="article:modified_time" content="2025-11-26T13:00:30Z">
+    <!-- /OG meta tags -->
+    <!-- X Card meta tags -->
+    <meta name="twitter:card" content="summary">
+    <!-- /X Card meta tags -->
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Music notation on computers",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://wikinder.org/Music-notation-on-computers"
+        },
+        "image": "https://wikinder.org/assets/images/icon.jpg",
+        "datePublished": "2025-09-08T02:01:15Z",
+        "dateModified": "2025-11-26T13:00:30Z",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "author": {
+          "@type": "Person",
+          "name": "yuuki",
+          "url": "https://github.com/wikinder/wikinder/commit/039c9ad70ebc748351c59e810796e312eaf9108c"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Wikinder",
+          "url": "https://wikinder.org",
+          "logo": "https://wikinder.org/assets/images/icon.jpg"
+        }
+      }
+    </script>
+    <!-- /Structured data -->
+  </head>
+  <body>
+    <!-- Page header -->
+    <header>
+      <nav>
+        <p>
+          <a href="/">Wikinder</a>
+        </p>
+      </nav>
+    </header>
+    <!-- /Page header -->
+    <!-- Page body -->
+    <main>
+      <article>
+        <!-- Article header -->
+        <header>
+          <h1>Music notation on computers</h1>
+          <p>
+            <time datetime="2025-09-08T02:01:15Z">September 8, 2025</time> · 🕒 <time datetime="2025-11-26T13:00:30Z">November 26, 2025</time>
+          </p>
+        </header>
+        <!-- /Article header -->
+        <!-- Article body -->
+        <div>
+          <p><a class="internal present" href="/yuuki">#yuuki</a></p>
+          <p>MusicXML is an interchange format for sheet music. However, it is too verbose to write by hand. MuseScore is a practical application that supports it.</p>
+          <p>LilyPond notation is useful for writing simple scores. It is less interchangeable, although python-ly provides limited support for converting to MusicXML.</p>
+          <p>Below are LilyPond fragments for nursery rhymes. See <a href="#how-to-convert-lilypond-scores">#How to convert LilyPond scores</a> for instructions. All files are available in <a href="https://github.com/yuukiarchive/sheetmusic">my repo</a>.</p>
+          <h2>
+            <a href="#row-row-row-your-boat" aria-hidden="true" class="anchor" id="row-row-row-your-boat"></a>Row, Row, Row Your Boat
+          </h2>
+          <pre lang="lilypond" style="background-color:#2b303b;"><code><span style="color:#c0c5ce;">\relative c' {
+</span><span style="color:#c0c5ce;">  \time 6/8
+</span><span style="color:#c0c5ce;">  c4. c4. | c4 d8 e4. | e4 d8 e4 f8 | g2. |
+</span><span style="color:#c0c5ce;">  c8[ c8 c8] g8[ g8 g8] | e8[ e8 e8] c8[ c8 c8] | g'4 f8 e4 d8 | c2. \fine
+</span><span style="color:#c0c5ce;">}
+</span></code></pre>
+          <p><img src="https://github.com/user-attachments/assets/fcc2eaa1-01cd-4c4f-b5d7-1efc7838a46c" alt="Sheet music for &quot;Row, Row, Row Your Boat&quot;"></p>
+          <p><a href="https://github.com/user-attachments/assets/662457d0-92e3-4e5e-bfb0-7c229551abf1">Play "Row, Row, Row Your Boat"</a></p>
+          <h2>
+            <a href="#twinkle-twinkle-little-star" aria-hidden="true" class="anchor" id="twinkle-twinkle-little-star"></a>Twinkle, Twinkle, Little Star
+          </h2>
+          <pre lang="lilypond" style="background-color:#2b303b;"><code><span style="color:#c0c5ce;">\relative c' {
+</span><span style="color:#c0c5ce;">  \time 4/4
+</span><span style="color:#c0c5ce;">  c4 c4 g'4 g4 | a4 a4 g2 | f4 f4 e4 e4 | d4 d4 c2 |
+</span><span style="color:#c0c5ce;">  g'4 g4 f4 f4 | e4 e4 d2 | g4 g4 f4 f4 | e4 e4 d2 |
+</span><span style="color:#c0c5ce;">  c4 c4 g'4 g4 | a4 a4 g2 | f4 f4 e4 e4 | d4 d4 c2 \fine
+</span><span style="color:#c0c5ce;">}
+</span></code></pre>
+          <p><img src="https://github.com/user-attachments/assets/24440c64-272d-45c8-97dd-d40b44c73982" alt="Sheet music for &quot;Twinkle, Twinkle, Little Star&quot;"></p>
+          <p><a href="https://github.com/user-attachments/assets/c616135f-fb58-47f9-bdf4-c6450ab10917">Play "Twinkle, Twinkle, Little Star"</a></p>
+          <h2>
+            <a href="#how-to-convert-lilypond-scores" aria-hidden="true" class="anchor" id="how-to-convert-lilypond-scores"></a>How to convert LilyPond scores
+          </h2>
+          <p>Prerequisites:</p>
+          <ul>
+            <li>lilypond</li>
+            <li>librsvg</li>
+            <li>fluidsynth</li>
+            <li><a href="https://github.com/pianobooster/fluid-soundfont/releases">FluidR3_GM.sf2</a></li>
+            <li>ffmpeg</li>
+            <li>python</li>
+            <li>python-ly</li>
+          </ul>
+          <p>Example of the full LilyPond score for "<a href="#row-row-row-your-boat">Row, Row, Row Your Boat</a>" (row.ly):</p>
+          <pre lang="lilypond" style="background-color:#2b303b;"><code><span style="color:#c0c5ce;">\version "2.24.4"
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">\paper {
+</span><span style="color:#c0c5ce;">  indent = #0
+</span><span style="color:#c0c5ce;">  line-width = #120
+</span><span style="color:#c0c5ce;">}
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">\header {
+</span><span style="color:#c0c5ce;">  title = "Row, Row, Row Your Boat"
+</span><span style="color:#c0c5ce;">}
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">\score {
+</span><span style="color:#c0c5ce;">  &lt;&lt;
+</span><span style="color:#c0c5ce;">  \chords {
+</span><span style="color:#c0c5ce;">    c,2.*4 |
+</span><span style="color:#c0c5ce;">    c,2.*2 | g,2. | c,2.
+</span><span style="color:#c0c5ce;">  }
+</span><span style="color:#c0c5ce;">  \relative c' {
+</span><span style="color:#c0c5ce;">    \time 6/8
+</span><span style="color:#c0c5ce;">    c4. c4. | c4 d8 e4. | e4 d8 e4 f8 | g2. | \break
+</span><span style="color:#c0c5ce;">    c8[ c8 c8] g8[ g8 g8] | e8[ e8 e8] c8[ c8 c8] | g'4 f8 e4 d8 | c2. \fine
+</span><span style="color:#c0c5ce;">  }
+</span><span style="color:#c0c5ce;">  &gt;&gt;
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">  \layout {
+</span><span style="color:#c0c5ce;">    \autoBreaksOff
+</span><span style="color:#c0c5ce;">    \numericTimeSignature
+</span><span style="color:#c0c5ce;">  }
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">  \midi {
+</span><span style="color:#c0c5ce;">    \tempo 4. = 120
+</span><span style="color:#c0c5ce;">  }
+</span><span style="color:#c0c5ce;">}
+</span></code></pre>
+          <p>Convert LilyPond to SVG and MIDI:</p>
+          <pre lang="sh" style="background-color:#2b303b;"><code><span style="color:#8fa1b3;">lilypond</span><span style="color:#bf616a;"> --svg -dcrop -dmidi-extension</span><span style="color:#c0c5ce;">=mid row.ly
+</span></code></pre>
+          <p>Set the SVG background to white:</p>
+          <pre lang="sh" style="background-color:#2b303b;"><code><span style="color:#8fa1b3;">rsvg-convert</span><span style="color:#bf616a;"> -b</span><span style="color:#c0c5ce;"> white</span><span style="color:#bf616a;"> -f</span><span style="color:#c0c5ce;"> svg</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> row.cropped.svg row.cropped.svg
+</span></code></pre>
+          <p>Convert MIDI to WAV:</p>
+          <pre lang="sh" style="background-color:#2b303b;"><code><span style="color:#8fa1b3;">fluidsynth</span><span style="color:#bf616a;"> -ni</span><span style="color:#c0c5ce;"> /path/to/FluidR3_GM.sf2 row.mid</span><span style="color:#bf616a;"> -F</span><span style="color:#c0c5ce;"> row.wav
+</span></code></pre>
+          <p>Convert WAV to WebM:</p>
+          <pre lang="sh" style="background-color:#2b303b;"><code><span style="color:#8fa1b3;">ffmpeg</span><span style="color:#bf616a;"> -f</span><span style="color:#c0c5ce;"> lavfi</span><span style="color:#bf616a;"> -i </span><span style="color:#c0c5ce;">'</span><span style="color:#a3be8c;">color=c=black:s=320x180</span><span style="color:#c0c5ce;">'</span><span style="color:#bf616a;"> -i</span><span style="color:#c0c5ce;"> row.wav</span><span style="color:#bf616a;"> -c</span><span style="color:#c0c5ce;">:v libvpx-vp9</span><span style="color:#bf616a;"> -c</span><span style="color:#c0c5ce;">:a libopus</span><span style="color:#bf616a;"> -af </span><span style="color:#c0c5ce;">'</span><span style="color:#a3be8c;">silenceremove=stop_periods=1:stop_threshold=-50dB</span><span style="color:#c0c5ce;">'</span><span style="color:#bf616a;"> -shortest -pix_fmt</span><span style="color:#c0c5ce;"> yuv420p row.webm
+</span></code></pre>
+          <p>Convert LilyPond to MusicXML (extracting only the <code>\relative</code> block):</p>
+          <pre lang="sh" style="background-color:#2b303b;"><code><span style="color:#8fa1b3;">python3</span><span style="color:#bf616a;"> -c </span><span style="color:#c0c5ce;">'</span><span style="color:#a3be8c;">import re, sys; print(re.search(r"\\relative.*?{.*?}", open(sys.argv[1]).read(), re.DOTALL).group(0))</span><span style="color:#c0c5ce;">' row.ly \
+</span><span style="color:#c0c5ce;">| </span><span style="color:#8fa1b3;">ly</span><span style="color:#c0c5ce;"> musicxml</span><span style="color:#bf616a;"> -o</span><span style="color:#c0c5ce;"> row.musicxml
+</span></code></pre>
+        </div>
+        <!-- /Article body -->
+      </article>
+    </main>
+    <!-- /Page body -->
+    <!-- Page footer -->
+    <footer>
+      <p>🧸 Content is available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise noted.</p>
+      <p>
+        <a href="https://github.com/wikinder/wikinder/wiki/Music-notation-on-computers">Edit this page</a>
+      </p>
+    </footer>
+    <!-- /Page footer -->
+  </body>
+</html>

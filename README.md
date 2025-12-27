@@ -2,4 +2,4 @@
 
 A fork of [Wikinder](https://wikinder.org)
 
-commit message test 3
+commit message test 4
